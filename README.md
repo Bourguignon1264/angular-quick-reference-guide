@@ -1,78 +1,87 @@
-Angular Quick Reference Guide
-Installation and Setup:
+# Angular Quick Reference Guide
 
-    Install Node.js (https://nodejs.org/)
-    Install Angular CLI: npm install -g @angular/cli
-    Create a new project: ng new my-app
-    Start the development server: cd my-app, ng serve
+## Installation and Setup:
 
-Basic Concepts:
+1. Install Node.js (https://nodejs.org/)
+2. Install Angular CLI: `npm install -g @angular/cli`
+3. Create a new project: `ng new my-app`
+4. Start the development server: `cd my-app`, `ng serve`
 
-    Components: Building blocks of an Angular app
-    Modules: Organize components, services, and other code
-    Templates: Define the UI layout and structure
-    Directives: Control DOM behavior
-    Services: Share data and logic across components
-    Dependency Injection: Manage dependencies in a modular way
+## Basic Concepts:
 
-Components:
+1. Components: Building blocks of an Angular app
+2. Modules: Organize components, services, and other code
+3. Templates: Define the UI layout and structure
+4. Directives: Control DOM behavior
+5. Services: Share data and logic across components
+6. Dependency Injection: Manage dependencies in a modular way
 
-    Create a new component: ng generate component my-component
-    Component decorator: @Component
-    Component template: Inline (template) or external (templateUrl)
-    Component styles: Inline (styles) or external (styleUrls)
+## Components:
 
-Data Binding:
+1. Create a new component: `ng generate component my-component`
+2. Component decorator: `@Component`
+3. Component template: Inline (`template`) or external (`templateUrl`)
+4. Component styles: Inline (`styles`) or external (`styleUrls`)
 
-    Interpolation: {{ variable }}
-    Property binding: [property]="expression"
-    Event binding: (event)="handlerMethod($event)"
-    Two-way binding: [(ngModel)]="variable"
+## Data Binding:
 
-Directives:
+1. Interpolation: `{{ variable }}`
+2. Property binding: `[property]="expression"`
+3. Event binding: `(event)="handlerMethod($event)"`
+4. Two-way binding: `[(ngModel)]="variable"`
 
-    Structural directives: Manipulate the DOM structure
-        *ngIf: Conditionally display content (<div *ngIf="condition">)
-        *ngFor: Loop over a collection (<div *ngFor="let item of items">)
-    Attribute directives: Change appearance or behavior
-        ngStyle: Apply styles dynamically ([ngStyle]="{'property': value}")
-        ngClass: Apply CSS classes dynamically ([ngClass]="{'class': condition}")
+## Directives:
 
-Services and Dependency Injection:
+1. Structural directives: Manipulate the DOM structure
+    * `*ngIf`: Conditionally display content (`<div *ngIf="condition">`)
+    * `*ngFor`: Loop over a collection (`<div *ngFor="let item of items">`)
+2. Attribute directives: Change appearance or behavior
+    * `ngStyle`: Apply styles dynamically (`[ngStyle]="{'property': value}"`)
+    * `ngClass`: Apply CSS classes dynamically (`[ngClass]="{'class': condition}"`)
 
-    Create a new service: ng generate service my-service
-    Service decorator: @Injectable
-    Inject a service: Add to the constructor: constructor(private myService: MyService) { }
-    Use providedIn: root for app-wide services
+## Services and Dependency Injection:
 
-Routing:
+1. Create a new service: `ng generate service my-service`
+2. Service decorator: `@Injectable`
+3. Inject a service: Add to the constructor: `constructor(private myService: MyService) { }`
+4. Use `providedIn: root` for app-wide services
 
-    Import RouterModule and Routes from @angular/router
-    Define routes: const routes: Routes = [{ path: 'route', component: MyComponent }]
-    Add RouterModule.forRoot(routes) to @NgModule.imports
-    Use <router-outlet> in the template for navigation
-    Navigate with routerLink: <a routerLink="/route">
+## Routing:
 
-Forms:
+1. Import `RouterModule` and `Routes` from `@angular/router`
+2. Define routes: `const routes: Routes = [{ path: 'route', component: MyComponent }]`
+3. Add `RouterModule.forRoot(routes)` to `@NgModule.imports`
+4. Use `<router-outlet>` in the template for navigation
+5. Navigate with `routerLink`: `<a routerLink="/route">`
 
-    Template-driven forms: Require FormsModule
-        Use [(ngModel)] for two-way binding
-        Use #ref="ngModel" for template reference
-    Reactive forms: Require ReactiveFormsModule
-        Use FormBuilder to create form controls
-        Use FormGroup and FormControl for form structure
+## Forms:
 
-HTTP and Observables:
+1. Template-driven forms: Require `FormsModule`
+    * Use `[(ngModel)]` for two-way binding
+    * Use `#ref="ngModel"` for template reference
+2. Reactive forms: Require `ReactiveFormsModule`
+    * Use `FormBuilder` to create form controls
+    * Use `FormGroup` and `FormControl` for form structure
 
-    Import HttpClientModule from @angular/common/http
-    Inject HttpClient in a service: constructor(private http: HttpClient) { }
-    Use .get(), .post(), .put(), or .delete() for HTTP requests
-    Subscribe to observables: .subscribe(data => { }, error => { })
+## HTTP and Observables:
 
-Angular Best Practices:
+1. Import `HttpClientModule` from `@angular/common/http`
+2. Inject `HttpClient` in a service: `constructor(private http: HttpClient) { }`
+3. Use `.get()`, `.post()`, `.put()`, or `.delete()` for HTTP requests
+4. Subscribe to observables: `.subscribe(data => { }, error => { })`
 
-    Organize code in feature modules
-    Use lazy loading for better performance
-    Employ a shared module for common components
-    Write unit tests with Jasmine and Karma
-    Optimize for production with Angular CLI build options.
+## Angular Best Practices:
+
+1. Organize code in feature modules
+2. Use lazy loading for better performance
+3. Employ a shared module for common components
+4. Write unit tests with Jasmine and Karma
+5. Optimize for production with Ahead-of-Time (AOT) compilation: `ng build --prod`
+6. Follow Angular Style Guide (https://angular.io/guide/styleguide)
+7. Use Angular Material for a consistent UI design (https://material.angular.io/)
+8. Keep templates clean and modular by utilizing pipes
+9. Leverage Angular's built-in directives and avoid direct DOM manipulation
+10. Utilize RxJS operators for more efficient handling of observables
+
+This Angular quick reference guide provides a concise overview of the essential concepts and techniques to kick-start your journey with Angular. Use this cheat sheet as a starting point and gradually expand your knowledge by diving deeper into each topic, exploring the official Angular documentation, and practicing with hands-on examples.
+
