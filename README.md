@@ -83,5 +83,3 @@
 9. Leverage Angular's built-in directives and avoid direct DOM manipulation
 10. Utilize RxJS operators for more efficient handling of observables
 
-This Angular quick reference guide provides a concise overview of the essential concepts and techniques to kick-start your journey with Angular. Use this cheat sheet as a starting point and gradually expand your knowledge by diving deeper into each topic, exploring the official Angular documentation, and practicing with hands-on examples.
-
